@@ -1,7 +1,8 @@
+import {HomePage} from "@/ui/templates/HomePage/HomePage";
 
 
 export default function Home() {
   return (
-   <h1>Test</h1>
+   <HomePage/>
   );
 }
