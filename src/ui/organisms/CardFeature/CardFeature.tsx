@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {ModelProductContext} from "@/providers/ModalProvider";
-import {Product} from "@/ui/templates/HomePage/HomePage";
+import {type Product} from "@/ui/templates/HomePage/HomePage";
 import './CardFeature.css';
 
 interface Props {

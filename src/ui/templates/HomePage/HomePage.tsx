@@ -2,7 +2,6 @@
 import {type Metadata} from "next";
 import './HomePage.css'
 import React, {useContext} from "react";
-
 import {ModalProduct} from "@/ui/organisms/ModalProduct/ModalProduct";
 import {ModelProductContext} from "@/providers/ModalProvider";
 import {CartProduct} from "@/ui/organisms/CartProduct/CartProduct";
@@ -12,7 +11,6 @@ import {Header} from "@/ui/organisms/Header/Header";
 import {CardMenu} from "@/ui/organisms/CardMenu/CardMenu";
 import {Footer} from "@/ui/organisms/Footer/Footer";
 import {CardFeature} from "@/ui/organisms/CardFeature/CardFeature";
-import Head from "next/head";
 
 export const metadata: Metadata = {
     title: "Restaurant APP - Szameczka.pl",

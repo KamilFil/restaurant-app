@@ -15,7 +15,7 @@ export const CardMenu = (props: Props) => {
 
     const pageElementQuantity = 9;
     const [currentPage, setCurrentPage] = useState(1);
-    const [totalPage, setTotalPage] = useState(Math.ceil(props.items.length / pageElementQuantity));
+    const totalPage = Math.ceil(props.items.length / pageElementQuantity);
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
