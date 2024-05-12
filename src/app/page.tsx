@@ -1,7 +1,19 @@
-
+"use client"
+import {HomePage} from "@/ui/templates/HomePage/HomePage";
+import {ModalProductProvider} from "@/providers/ModalProvider";
+import {CartProvider} from "@/providers/CartProvider";
 
 export default function Home() {
   return (
-   <h1>Test</h1>
+      <>
+
+          <ModalProductProvider>
+              <CartProvider>
+              <HomePage/>
+              </CartProvider>
+          </ModalProductProvider>
+      </>
+
+
   );
 }

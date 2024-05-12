@@ -1,0 +1,38 @@
+.footer {
+    background-color: #ef7428;
+    color: #ffffff;
+}
+
+.footer .container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-brand {
+    flex-basis: 20%;
+
+}
+
+.footer-item p {
+    font-weight: bold;
+}
+
+.footer-item li {
+    list-style-type: none;
+}
+
+.footer .copy {
+    background-color: #e76215;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}

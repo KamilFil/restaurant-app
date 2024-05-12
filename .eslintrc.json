@@ -65,13 +65,17 @@
       { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
     ],
 
-    // numbers and booleans are fine in template strings
+    // numbers and booleans are fine in templates strings
     "@typescript-eslint/restrict-template-expressions": [
       "error",
       { "allowNumber": true, "allowBoolean": true }
     ],
 
-    "@typescript-eslint/no-misused-promises": ["error", { "checksVoidReturn": false }],
+    "@typescript-eslint/no-misused-promises": ["error", {
+      "checksVoidReturn": {
+        "attributes": false
+      }
+    }],
 
     "no-restricted-imports": [
       "error",
