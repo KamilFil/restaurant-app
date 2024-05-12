@@ -7,11 +7,16 @@ import {ModelProductContext} from "@/providers/ModalProvider";
 
 export const ModalProduct = () => {
     const modalProductContext = useContext(ModelProductContext);
-
+    {document.body.style.overflow =  modalProductContext?.modalProductOpen ? 'hidden' : 'auto';}
     if(!modalProductContext?.selectProduct) {
         return null;
     }
     const {id, img, title, price, description} = modalProductContext.selectProduct
+
+    const handleModalClose = () => {
+        modalProductContext.closeModalProduct();
+        document.body.style.overflow = 'auto';
+    }
 
     return (
         <>
@@ -20,7 +25,7 @@ export const ModalProduct = () => {
                 </div>
                 <div className='modal-product-list'>
                     <div className="modal-product-close">
-                        <i onClick={modalProductContext.closeModalProduct} className="modal-close fa-solid fa-xmark"></i>
+                        <i onClick={handleModalClose} className="modal-close fa-solid fa-xmark"></i>
                     </div>
                     <div className='modal-product-list-item'>
                         <div className='modal-product-list-item-img'>

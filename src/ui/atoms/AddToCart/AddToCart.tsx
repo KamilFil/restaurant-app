@@ -20,6 +20,7 @@ export const AddToCartButton: React.FC<Props> = (props:Props) => {
         } else {
             alert('Błąd podczas dodawania do koszyka');
         }
+        document.body.style.overflow = 'auto';
         modalProductContext?.closeModalProduct();
     };
 

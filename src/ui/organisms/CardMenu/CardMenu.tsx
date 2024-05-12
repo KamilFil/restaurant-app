@@ -13,6 +13,7 @@ export const CardMenu = (props: Props) => {
     const modalProductContext = useContext(ModelProductContext);
 
 
+
     const pageElementQuantity = 9;
     const [currentPage, setCurrentPage] = useState(1);
     const totalPage = Math.ceil(props.items.length / pageElementQuantity);
