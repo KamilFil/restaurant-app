@@ -3,7 +3,6 @@ body {
     font-family: "Roboto Light", serif;
 }
 
-
 .modal-blur {
     position: absolute;
     width: 100%;
@@ -16,7 +15,6 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    /*padding: 20px;*/
     cursor: pointer;
     border: none;
     border-radius: 100px;
@@ -33,3 +31,15 @@ h2 {
     margin: 0 auto;
 }
 
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1268px) {
+   .container {
+       padding: 0 20px;
+   }
+}

@@ -2,7 +2,7 @@
 
 .modal-cart {
     /*display: none;*/
-    z-index: 1;
+    z-index: 1000;
     position: fixed;
     left: 0;
     top: 0;
@@ -42,4 +42,13 @@
 td, th {
     text-align: left;
     padding-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-cart
+
+    .modal-cart-content {
+        padding: 20px 20px;
+        width: 80%;
+    }
 }
