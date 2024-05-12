@@ -36,3 +36,22 @@
     padding: 10px 0;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-list {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        margin-bottom: 20px;
+    }
+
+    .footer-brand {
+        margin-bottom: 20px;
+    }
+}

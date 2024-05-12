@@ -14,16 +14,18 @@ export interface CartContext {
     modalCartOpen: boolean;
 }
 
-export const CartContext = createContext<CartContext | undefined>(undefined);
 
 interface Props {
     children: React.ReactNode;
 }
+export const CartContext = createContext<CartContext | undefined>(undefined);
+
 
 export const CartProvider = ({children}: Props) => {
 
     const [cart, setCart] = useState<CartItem[] | []>([]);
     const [modalCartOpen, setModalCartOpen] = useState<boolean>(false);
+
 
     useEffect(() => {
         const getCookies:string | undefined = Cookie.get('cart');
@@ -32,6 +34,7 @@ export const CartProvider = ({children}: Props) => {
         }
         const dataCart = JSON.parse(getCookies || '[]') as CartItem[];
         setCart(dataCart);
+
     }, [modalCartOpen]);
 
     const modalCartOpenHandler = (open:boolean) => () => {

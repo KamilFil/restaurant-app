@@ -6,10 +6,9 @@ import {CartProvider} from "@/providers/CartProvider";
 export default function Home() {
   return (
       <>
-
           <ModalProductProvider>
               <CartProvider>
-              <HomePage/>
+                <HomePage/>
               </CartProvider>
           </ModalProductProvider>
       </>

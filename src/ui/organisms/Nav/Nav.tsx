@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import Link from "next/link";
 import {CartContext} from "@/providers/CartProvider";
 import './Nav.css'
@@ -6,6 +6,21 @@ import './Nav.css'
 
 export const Nav = () => {
     const cartContext = useContext(CartContext);
+    const [mobileActive, setMobileActive] = useState(false)
+
+
+
+    const handleMobileMenu = () => {
+        document.body.style.overflow = mobileActive ? 'auto' : 'hidden'
+        setMobileActive(!mobileActive)
+    }
+
+
+    const handleCart = () => {
+        cartContext?.modalCartOpenHandler(true)()
+       setMobileActive(false)
+    }
+
     return (
 
         <nav className='nav'>
@@ -21,8 +36,17 @@ export const Nav = () => {
                         <Link href={'#feature'} className='nav-link-item' >Polecane</Link>
                     </ul>
                     <div className='nav-cart'>
-                        <i onClick={cartContext?.modalCartOpenHandler(true)} className="fa-solid fa-cart-shopping">
+                        <i onClick={handleCart} className="fa-solid fa-cart-shopping">
                         </i>
+                    </div>
+                    <div className='nav-hamburger'>
+                        <i className="fa-solid fa-hamburger" onClick={handleMobileMenu}></i>
+                    </div>
+                    <div className={`nav-mobile-link ${mobileActive ? 'active' : ''}`}>
+                        <ul className='nav-mobile-list'>
+                            <Link onClick={handleMobileMenu} href={'#menu'} className='nav-mobile-item' >Menu</Link>
+                            <Link onClick={handleMobileMenu} href={'#feature'} className='nav-mobile-item' >Polecane</Link>
+                        </ul>
                     </div>
                 </div>
                 {/*@TODO Add search bar*/}

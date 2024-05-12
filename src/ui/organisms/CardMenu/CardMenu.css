@@ -61,3 +61,11 @@
 .menu-card-item-price {
     font-weight: 800;
 }
+
+@media screen and (max-width: 768px) {
+    .menu-card-item {
+        width: 100%;
+    }
+
+}
+

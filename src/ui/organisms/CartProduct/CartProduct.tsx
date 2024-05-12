@@ -1,21 +1,29 @@
 import React, {useContext} from "react";
 import './CartProduct.css'
-
 import {CartContext} from "@/providers/CartProvider";
 
 export const CartProduct = () => {
 
     const cartContext = useContext(CartContext);
-    if(!cartContext) {
+
+    {document.body.style.overflow = cartContext ? 'hidden' : "auto";}
+
+    const cartHandler = (open:boolean) => () => {
+        cartContext?.modalCartOpenHandler(open)();
+        document.body.style.overflow = 'auto';
+    }
+
+    if(!cartContext?.modalCartOpen) {
         return null;
     }
-    const {cart, modalCartOpenHandler} = cartContext;
+
+    const {cart} = cartContext;
 
     return (
         <div className='modal-cart'>
             <div className='modal-blur'></div>
             <div className="modal-cart-content">
-                <i onClick={modalCartOpenHandler(false)} className="modal-close fa-solid fa-xmark"></i>
+                <i onClick={cartHandler(false)} className="modal-close fa-solid fa-xmark"></i>
                 <h2>Twój koszyk</h2>
                 <table className='modal-cart-list'>
                     <thead className='modal-cart-list-head'>
