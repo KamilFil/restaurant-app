@@ -33,7 +33,7 @@ export const ModalProduct = () => {
                         </div>
                         <div className='modal-product-list-item-description'>
                             <h1>{title}</h1>
-                            <p>{price}</p>
+                            <p className='modal-product-list-item-price'>{price}</p>
                             <p>{description}</p>
                             <AddToCartButton items={{id: String(id), title: title, price: price}}/>
                         </div>

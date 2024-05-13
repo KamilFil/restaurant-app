@@ -52,6 +52,13 @@
     margin-top: 20px;
 }
 
+.modal-product-list-item-price {
+    font-weight: bold;
+    color: #ef7428;
+    font-size: 26px;
+
+}
+
 @media screen and (max-width: 768px) {
     .modal-product-list {
         padding: 10px 0;

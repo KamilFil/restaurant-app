@@ -1,8 +1,10 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import './CartProduct.css'
 import {CartContext} from "@/providers/CartProvider";
+import Cookies from "js-cookie";
 
 export const CartProduct = () => {
+    const [orderRes, setOrderRes] = useState(null)
 
     const cartContext = useContext(CartContext);
 
@@ -15,6 +17,15 @@ export const CartProduct = () => {
 
     if(!cartContext?.modalCartOpen) {
         return null;
+    }
+
+    const orderHandler = () => {
+        Cookies.remove('cart')
+        setOrderRes('Twoje zamówienie zostało złożone. Dziękujemy!')
+        setTimeout(() => {
+            cartHandler(false)();
+        }, 3000)
+
     }
 
     const {cart} = cartContext;
@@ -42,7 +53,8 @@ export const CartProduct = () => {
                     ))}
                     </tbody>
                 </table>
-                <button className='modal-cart-btn'>Przejdź do płatności</button>
+                <button className='modal-cart-btn' onClick={orderHandler}>Przejdź do płatności</button>
+                {orderRes && <p>{orderRes}</p>}
             </div>
         </div>
     )

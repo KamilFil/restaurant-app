@@ -1,5 +1,6 @@
 import React from "react";
 import './Footer.css';
+import Link from "next/link";
 export const Footer = () => {
     return (
         <footer className='footer'>
@@ -12,9 +13,11 @@ export const Footer = () => {
                     <div className='footer-item'>
                         <p>Nawigacja</p>
                         <ul>
-                            <li>Facebook</li>
-                            <li>Instagram</li>
-                            <li>Twitter</li>
+                            <li>
+                                <Link href={"/#menu"}>Menu</Link>
+                            </li>
+
+                            <li> <Link href={"/#feature"}>Polecane</Link></li>
                         </ul>
                     </div>
                     <div className='footer-item'>
@@ -27,7 +30,7 @@ export const Footer = () => {
                 </div>
             </div>
             <div className='copy'>
-                <p>© 2024 - Szameczka.pl</p>
+                <p>© 2024 - Szameczka.pl - <a href={'https://kamil-filip.pl/'}>Kamil Filip</a></p>
             </div>
         </footer>
     )

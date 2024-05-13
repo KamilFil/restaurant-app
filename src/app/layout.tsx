@@ -8,8 +8,12 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Restaurant APP - Szamka.pl",
+  title: "Restauracja Domowa - Szameczka.pl",
   description: "",
+  icons: {
+    icon: "/img/favicon.svg",
+  },
+
 
 };
 
