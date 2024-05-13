@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import './CartProduct.css'
-import {CartContext} from "@/providers/CartProvider";
 import Cookies from "js-cookie";
+import {CartContext} from "@/providers/CartProvider";
 
 export const CartProduct = () => {
     const [orderRes, setOrderRes] = useState<string | null>(null)
