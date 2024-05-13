@@ -4,7 +4,7 @@ import {CartContext} from "@/providers/CartProvider";
 import Cookies from "js-cookie";
 
 export const CartProduct = () => {
-    const [orderRes, setOrderRes] = useState(null)
+    const [orderRes, setOrderRes] = useState<string | null>(null)
 
     const cartContext = useContext(CartContext);
 
